@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#020617"/>
+  <text x="80" y="120" fill="#f8fafc" font-size="58" font-family="Arial">LNNC Empfehlungskarten</text>
+  <rect x="120" y="180" width="1040" height="130" rx="16" fill="#0f172a"/>
+  <rect x="120" y="340" width="1040" height="130" rx="16" fill="#0f172a"/>
+  <rect x="120" y="500" width="1040" height="130" rx="16" fill="#0f172a"/>
+  <text x="160" y="260" fill="#cbd5e1" font-size="36" font-family="Arial">Peer A · hoher Unique-Reach · mittleres Risiko</text>
+  <text x="160" y="420" fill="#cbd5e1" font-size="36" font-family="Arial">Peer B · gute Stabilitaet · hohe Overlap-Warnung</text>
+  <text x="160" y="580" fill="#cbd5e1" font-size="36" font-family="Arial">Peer C · beste Diversifizierung · niedrige Historie</text>
+</svg>
