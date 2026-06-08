@@ -2,7 +2,7 @@ manifestVersion: 1
 id: northpower25-lightning-node-copilot-for-umbrel
 name: Lightning Node Copilot for Umbrel
 tagline: Advisory-only Empfehlungen fuer bessere Lightning-Peers
-icon: https://raw.githubusercontent.com/getumbrel/umbrel-community-app-store/master/sparkles-hello-world/icon.svg
+icon: https://raw.githubusercontent.com/northpower25/Lightning-Node-Copilot-for-Umbrel/main/northpower25-lightning-node-copilot-for-umbrel/assets/icon.svg
 category: Bitcoin
 version: "1.0.0"
 port: 4000
@@ -18,9 +18,9 @@ submission: https://github.com/northpower25/Lightning-Node-Copilot-for-Umbrel
 repo: https://github.com/northpower25/Lightning-Node-Copilot-for-Umbrel
 support: https://github.com/northpower25/Lightning-Node-Copilot-for-Umbrel/issues
 gallery:
-  - https://raw.githubusercontent.com/getumbrel/umbrel-community-app-store/master/sparkles-hello-world/gallery/1.jpg
-  - https://raw.githubusercontent.com/getumbrel/umbrel-community-app-store/master/sparkles-hello-world/gallery/2.jpg
-  - https://raw.githubusercontent.com/getumbrel/umbrel-community-app-store/master/sparkles-hello-world/gallery/3.jpg
+  - https://raw.githubusercontent.com/northpower25/Lightning-Node-Copilot-for-Umbrel/main/northpower25-lightning-node-copilot-for-umbrel/gallery/1.svg
+  - https://raw.githubusercontent.com/northpower25/Lightning-Node-Copilot-for-Umbrel/main/northpower25-lightning-node-copilot-for-umbrel/gallery/2.svg
+  - https://raw.githubusercontent.com/northpower25/Lightning-Node-Copilot-for-Umbrel/main/northpower25-lightning-node-copilot-for-umbrel/gallery/3.svg
 releaseNotes: >-
   V1 Initial-Release als installierbare Umbrel Community App inklusive App-Store-
   Metadaten, app_proxy-Anbindung und updatefaehiger Versionsverwaltung.
