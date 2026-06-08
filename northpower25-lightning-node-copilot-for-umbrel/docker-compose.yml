@@ -1,0 +1,14 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: northpower25-lightning-node-copilot-for-umbrel_server_1
+      APP_PORT: 80
+
+  server:
+    image: nginx:1.27-alpine
+    init: true
+    restart: unless-stopped
+    volumes:
+      - ./www:/usr/share/nginx/html:ro
