@@ -1,10 +1,10 @@
-# PeerPilot for Umbrel
+# Lightning Node Copilot for Umbrel (LNNC)
 
 Visuelle Decision Engine fuer Lightning-Peering auf Umbrel.
 
 ## Produktvision
 
-PeerPilot kombiniert:
+Lightning Node Copilot for Umbrel (LNNC) kombiniert:
 
 1. Peer-Auswahl und Channel-Aufbau fuer neue Lightning-Nodes.
 2. Grafische Topologie-Simulation fuer "Was waere wenn"-Entscheidungen.
@@ -14,7 +14,7 @@ Ziel ist nicht nur "welcher Peer ist gut", sondern "welcher Peer passt zu meiner
 
 ## Produktgrenzen (wichtig)
 
-PeerPilot ist in den ersten Versionen ein reines Analyse- und Empfehlungssystem (Advisory Only):
+LNNC ist in den ersten Versionen ein reines Analyse- und Empfehlungssystem (Advisory Only):
 
 - Kein automatisches Oeffnen oder Schliessen von Channels.
 - Kein automatisches Rebalancing.
@@ -107,7 +107,7 @@ Wichtig fuer V1-V2:
 
 ## Umbrel- und Integrationsrahmen
 
-PeerPilot wird als Umbrel-App im Standardlayout gebaut:
+LNNC wird als Umbrel-App im Standardlayout gebaut:
 
 - `umbrel-app.yml`
 - `docker-compose.yml`
@@ -448,7 +448,7 @@ Kurze Begruendung:
 ## Repo-Strukturvorschlag
 
 ```
-peerpilot/
+lnnc/
 	umbrel-app.yml
 	docker-compose.yml
 	exports.sh
