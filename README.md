@@ -206,19 +206,58 @@ OperationalScore =
 
 ## V1 (MVP)
 
-- Starter Wizard
+Kernfunktionen:
+
+- Starter Wizard mit Fokus auf Einsteiger und early-routing Hybrid-Profile
 - Peer-Overlap- und Diversity-Analyse
 - Kandidatenvergleich
 - Empfehlungen mit Begruendung
-- Advisory-Only Modus: keine automatischen Node-Aktionen
+- Advisory-Only Modus: keine automatischen Node-Aktionen (Open/Close/Resize, Rebalance, Fee-Aenderungen bleiben vollstaendig manuell)
+
+Sicherheit und Zugriff:
+
+- Least-Privilege-Zugriff auf LND/LNDG: minimale Read-Rechte, keine Schreiboperationen
+- Produktweite Advisory-Only Policy verankert in UI-Texten, API-Contracts und Dokumentation
+
+Qualitaet und Messbarkeit:
+
+- KPI-Set fuer V1 definiert und gemessen (z. B. Akzeptanzrate von Empfehlungen, wahrgenommene Verstaendlichkeit, Overlap-Reduktion in simulierten Plaenen)
+- Snapshot-Datenmodell: Inputdaten, Score-Version, erzeugte Empfehlungen und spaetere Outcomes historisiert
+- Erfolgsmessung ueber qualitative und indirekte Metriken: Nutzerfeedback, Empfehlungsklarheit, angenommene manuelle Aktionen
+
+Robustheit und Ausfallsicherheit:
+
+- Degradationslogik mit harten Degrade-Stufen: vollstaendig, eingeschraenkt, nur Topologie
+- Fallback: Bei fehlenden LNDG-Daten wird automatisch auf Topologie-basierte Analyse umgeschaltet, klar gekennzeichnet im UI
+- LNDG ist optional in V1 (Pflicht erst ab V2-Funktionen)
+
+Explainability und UI:
+
+- Einheitliche Recommendation Card: Warum empfohlen, warum nicht Alternative X, Risiko, Confidence-Level, Datenalter
+- Jede Empfehlung visualisiert Confidence-Level und Datenabdeckung
+- Export von Empfehlungslisten als manuelle Checkliste (CSV/JSON/Markdown), keine API-Execution
+
+Internationalisierung:
+
+- i18n fuer Deutsch (de) und Englisch (en) von Beginn an
+- Key-basierte Uebersetzungen, CI-Checks auf fehlende Keys, Fallback auf Englisch
+- Default-Sprache: Browser/Umgebungs-Locale, Fallback Englisch, jederzeit manuell umstellbar
+- Recommendation Templates mit strukturierten Platzhaltern fuer regelbasierte Mehrsprachigkeit
+
+Teststrategie:
+
+- Replay- und Regressionstests fuer Scoring und Ranking-Reihenfolge als Pflichtbestandteil
 
 ## V2
 
-- Vertiefte operative Datenintegration
+- Vertiefte operative Datenintegration (LNDG als Pflichtdatenquelle fuer operative Funktionen)
+- Aktivierung von Operational Scoring erst ab definierter Mindestdatenbasis (Mindestanzahl Tage und Events)
 - Peer-Fingerprinting
 - Gap Detection (fehlende Direktpeers)
 - Lernende Priorisierung
 - Verbesserte Explainability inkl. Confidence und Datenabdeckung
+- Score-Governance: Versionierte Score-Configs mit Changelog und Vergleichsansicht alter vs. neuer Empfehlungen
+- Erweiterung auf weitere Sprachen nach Abdeckungskriterien (kritische Flows 100 Prozent, Rest mindestens definierter Schwellenwert)
 
 ## V3
 
@@ -226,6 +265,7 @@ OperationalScore =
 - Advisory fuer Open/Close/Resize
 - Erweiterte "What-if"-Szenarien
 - Optionaler Export von Aktions-Playbooks (nur als Checkliste, keine Auto-Ausfuehrung)
+- Vergleichsansicht: alte vs. neue Empfehlungen bei Score-Aenderungen (auditierbar)
 
 ## Implementierungs-Readiness
 
