@@ -517,3 +517,26 @@ lnnc/
 3. Erste Collector-Endpunkte fuer lokale Node-Metriken bauen.
 4. Heuristische Scoring-Engine fuer Starter-Mode implementieren.
 5. Frontend mit Wizard + Topology-Ansicht als klickbaren MVP erstellen.
+
+## V1 Umsetzungsstatus: Umbrel Community App Store
+
+Der V1-Start ist als installierbare Umbrel Community App vorbereitet.
+
+- App-Store-Metadaten liegen in `umbrel-app-store.yml`.
+- Die App liegt unter `northpower25-lightning-node-copilot-for-umbrel/`.
+- Umbrel-Metadaten: `northpower25-lightning-node-copilot-for-umbrel/umbrel-app.yml`
+- Laufzeit-Setup: `northpower25-lightning-node-copilot-for-umbrel/docker-compose.yml`
+- V1-Startseite fuer Installations-/Proxy-Validierung: `northpower25-lightning-node-copilot-for-umbrel/www/index.html`
+
+### Installation in Umbrel (Community App Store)
+
+1. In Umbrel den Community-App-Store-Bereich oeffnen.
+2. Als Store-URL dieses Repository hinterlegen:
+   - `https://github.com/northpower25/Lightning-Node-Copilot-for-Umbrel`
+3. Nach dem Laden des Stores die App **Lightning Node Copilot for Umbrel** installieren.
+
+### Update-Ablauf ueber Umbrel
+
+- Fuer Updates die Version in `northpower25-lightning-node-copilot-for-umbrel/umbrel-app.yml` erhoehen.
+- Falls noetig, die Laufzeitanpassungen in `docker-compose.yml` aktualisieren.
+- Nach Push der Aenderungen erkennt Umbrel die neue Version im Community App Store und bietet das Update an.
